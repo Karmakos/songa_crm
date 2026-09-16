@@ -8,3 +8,5 @@
 [post_fixture_sync]
 # Patches added in this section will be executed after fixtures and customizations
 # (Custom Field, Property Setter, etc) are synced
+
+songa_crm.patches.v1_0.setup_lead_fixed
