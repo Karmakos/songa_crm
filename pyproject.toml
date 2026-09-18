@@ -4,7 +4,7 @@ authors = [
     { name = "John Murigi", email = "karimakos.murigi@gmail.com"}
 ]
 description = "Custom scripts for songa crm customizations"
-requires-python = ">=3.14"
+requires-python = ">=3.11,<3.12"
 readme = "README.md"
 dynamic = ["version"]
 dependencies = [
