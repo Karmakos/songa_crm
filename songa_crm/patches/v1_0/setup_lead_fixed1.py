@@ -56,5 +56,3 @@ def configure_lead_status():
             "data",
             validate_fields_for_doctype=False,
         )
-
-        frappe.db.commit()
