@@ -6,10 +6,10 @@ from frappe.custom.doctype.property_setter.property_setter import (
 
 
 def execute():
-    configure_lead_status()
+    configure_lead_classification()
 
 
-def configure_lead_status():
+def configure_lead_classification():
     fields = [
         {
             "field": "status",
@@ -33,6 +33,20 @@ def configure_lead_status():
                 "Dairy Off-taker",
                 "Operating Company Partner",
                 "Stakeholder",
+            ],
+            "default": "",
+        },
+        {
+            "field": "request_type",
+            "options": [
+                "",
+                "Driver Recruitment",
+                "Farmer Onboarding",
+                "Cooperative Partnership",
+                "Dairy Off-taker Partnership",
+                "Operating Partnership",
+                "Stakeholder Engagement",
+                "Other",
             ],
             "default": "",
         },
