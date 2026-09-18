@@ -5,8 +5,8 @@
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
 
-songa_crm.patches.v1_0.setup_lead_classification
-songa_crm.patches.v1_0.setup_lead_workflow
+songa_crm.patches.v1_0.setup_lead_classification_fixed
+songa_crm.patches.v1_0.setup_lead_workflow_fixed
 
 [post_fixture_sync]
 # Patches added in this section will be executed after fixtures and customizations
