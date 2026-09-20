@@ -48,6 +48,13 @@ STATES = [
         "update_value": "Declined",
         "allow_edit": "Sales User",
     },
+    {
+        "state": "Unsubscribed",
+        "doc_status": 0,
+        "update_field": "unsubscribed",
+        "update_value": "Unsubscribed",
+        "allow_edit": "Sales User",
+    },
 ]
 
 
@@ -106,6 +113,30 @@ TRANSITIONS = [
         "next_state": "Engaged",
         "allowed": "Sales Manager",
     },
+    {
+        "state": "Identified",
+        "action": "Decline",
+        "next_state": "Unsubscribed",
+        "allowed": "Sales User",
+    },
+    {
+        "state": "To Contact",
+        "action": "Decline",
+        "next_state": "Unsubscribed",
+        "allowed": "Sales User",
+    },
+    {
+        "state": "Contacted",
+        "action": "Decline",
+        "next_state": "Unsubscribed",
+        "allowed": "Sales User",
+    },
+    {
+        "state": "Engaged",
+        "action": "Decline",
+        "next_state": "Unsubscribed",
+        "allowed": "Sales User",
+    }
 ]
 
 
@@ -175,6 +206,9 @@ def sync_states(workflow):
 
         if row:
             row.doc_status = state["doc_status"]
+            row.update_field = state["update_field"]
+            row.update_value = state["update_value"]
+            row.allow_edit = state["allow_edit"]
         else:
             workflow.append(
                 "states",

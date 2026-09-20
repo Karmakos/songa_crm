@@ -56,7 +56,9 @@ use_json_request_body = True
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Lead": "public/js/v1_0/lead/lead_validation.js"
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -188,6 +190,12 @@ use_json_request_body = True
 # 		"on_trash": "method"
 # 	}
 # }
+
+doc_events = {
+    "Lead": {
+        "validate": "songa_crm.songa_crm.overrides.lead.lead_validation.validate_lead_workflow",
+    }
+}
 
 # Scheduled Tasks
 # ---------------
