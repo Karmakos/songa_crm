@@ -10,6 +10,8 @@ COMMON_FIELDS = [
 
 TYPE_FIELDS = {
     "Driver": [
+        "gender",
+        "date_of_birth",
         "custom_national_id_number",
         "custom_license_class",
         "custom_trike_motorcycle_experience_yrs",
@@ -27,6 +29,7 @@ TYPE_FIELDS = {
     ],
 
     "Cooperative": [
+        "company_name",
         "custom_member_count",
         "custom_daily_milk_collection",
         "custom_current_offtaker",

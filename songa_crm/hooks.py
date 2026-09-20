@@ -194,6 +194,7 @@ doctype_js = {
 doc_events = {
     "Lead": {
         "validate": "songa_crm.songa_crm.overrides.lead.lead_validation.validate_lead_workflow",
+        "on_update": "songa_crm.songa_crm.crm.lead.onboarding.onboard_lead",
     }
 }
 
@@ -323,6 +324,22 @@ fixtures = [
         "dt": "Property Setter",
         "filters": [
             ["doc_type", "=", "Lead"]
+        ]
+    },
+    {
+        "dt": "Email Template",
+        "filters": [["name", "in", ["Welcome to the Songa Mobility Community", "Stay connected with Songa Mobility"]]]
+    },
+    {
+        "dt": "Email Group",
+        "filters": [["title", "in", ["Newsletter Subscribers", "Product Updates"]]]
+    },
+    {
+        "dt": "Web Page",
+        "filters": [
+            ["name", "in", [
+                "thank-you-for-subscribing-to-our-newsletter"
+            ]]
         ]
     }
 ]
