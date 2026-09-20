@@ -87,9 +87,6 @@ def get_required_fields(doc):
 def validate_lead_workflow(doc, method=None):
     """
     Validate Lead before a workflow transition is saved.
-
-    Full Prospect-Type-specific validation is required when
-    the Lead moves to Engaged or Onboarded.
     """
 
     # Nothing to validate if this is a new document.
@@ -114,7 +111,7 @@ def validate_lead_workflow(doc, method=None):
         return
 
     # Only enforce the full profile when entering
-    # Engaged or Onboarded.
+    # Contacted/Engaged/Onboarded.
     if current_state not in VALIDATION_STATES:
         return
 
@@ -147,7 +144,7 @@ def validate_lead_workflow(doc, method=None):
     if not missing_fields:
         return
 
-    # Convert fieldnames into human-readable labels.
+    # Convert fieldnames into labels.
     meta = frappe.get_meta("Lead")
 
     labels = []
