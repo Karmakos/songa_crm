@@ -186,7 +186,7 @@ def validate_workflow_locks(doc, method=None):
 
     if old_doc.workflow_state in locked_states:
 
-        locked_fields = ["type",   "status", "email_id", "mobile_no"]
+        locked_fields = ["type", "email_id", "mobile_no"]
 
         for fieldname in locked_fields:
             if doc.has_value_changed(fieldname):
