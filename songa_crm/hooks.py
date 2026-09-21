@@ -57,7 +57,7 @@ use_json_request_body = True
 
 # include js in doctype views
 doctype_js = {
-    "Lead": "public/js/v1_0/lead/lead_validation.js"
+    "Lead": "public/js/v1_0/Lead/validation.js"
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -193,8 +193,9 @@ doctype_js = {
 
 doc_events = {
     "Lead": {
-        "validate": "songa_crm.songa_crm.overrides.lead.lead_validation.validate_lead_workflow",
-        "on_update": "songa_crm.songa_crm.crm.lead.onboarding.onboard_lead",
+        "validate": "songa_crm.songa_crm.v1_0.overrides.lead.lead_validation.validate_lead_workflow",
+        "on_update": "songa_crm.songa_crm.v1_0.crm.lead.onboarding.onboard_lead",
+        "before_save": "songa_crm.songa_crm.v1_0.overrides.lead.lead_validation.validate_workflow_locks"
     }
 }
 
@@ -317,13 +318,13 @@ fixtures = [
     {
         "dt": "Custom Field",
         "filters": [
-            ["name", "like", "Lead-%"]
+            ["dt", "in", ["Lead", "Supplier", "Customer", "Employee"]]
         ]
     },
     {
         "dt": "Property Setter",
         "filters": [
-            ["doc_type", "=", "Lead"]
+            ["doc_type", "in", ["Lead", "Supplier", "Customer", "Employee"]]
         ]
     },
     {
@@ -341,5 +342,13 @@ fixtures = [
                 "thank-you-for-subscribing-to-our-newsletter"
             ]]
         ]
+    },
+    {
+        "dt": "Buying Settings",
+        "filters": [["name", "=", "Buying Settings"]]
+    },
+    {
+        "dt": "Selling Settings",
+        "filters": [["name", "=", "Selling Settings"]]
     }
 ]

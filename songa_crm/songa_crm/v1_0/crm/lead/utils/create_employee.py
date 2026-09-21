@@ -1,7 +1,13 @@
+import frappe
+from frappe.utils import today
+
+
 def create_employee(lead):
     existing = frappe.db.get_value(
         "Employee",
-        {"user_id": lead.email_id},
+        {
+            "custom_lead_name": lead.name
+        },
         "name",
     )
 
@@ -12,7 +18,8 @@ def create_employee(lead):
         "doctype": "Employee",
         "first_name": lead.first_name,
         "gender": lead.gender,
-        "date_of_birth": lead.date_of_birth,
+        "date_of_birth": lead.custom_date_of_birth,
+        "date_of_joining": today(),
         "cell_number": lead.mobile_no,
         "personal_email": lead.email_id,
     })

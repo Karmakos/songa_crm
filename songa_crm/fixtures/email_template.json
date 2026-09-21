@@ -1,0 +1,22 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Email Template",
+  "modified": "2026-09-20 20:40:17.844009",
+  "name": "Stay connected with Songa Mobility",
+  "response": "<div class=\"ql-editor read-mode\"><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\">Hello,</span></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\"><br></span></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\">Thank you for connecting with Songa Mobility.</span></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\"><br></span></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\">We’re building a network of people and organizations working across agriculture, transport, dairy, business, partnerships, and related areas.</span></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\"><br></span></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\">Based on your interest in Songa, we’d like to keep you informed about relevant opportunities, updates, events, partnerships, and other developments.</span></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\"><br></span></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\">Before we add you to our regular communications, please confirm that you’d like to hear from us.</span></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\"><br></span></p><p><a href=\"{{ confirmation_url }}\" rel=\"noopener noreferrer\">Subscribe to Our Newsletter</a></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\"><br></span></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\">You can unsubscribe at any time from future communications. If you did not request to receive information from Songa, you can ignore this email.</span></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\"><br></span></p><p><strong style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\">Songa Mobility Team</strong></p><p><span style=\"color: rgb(31, 31, 31); background-color: rgba(0, 0, 0, 0);\">Connecting people, opportunities &amp; progress</span></p></div>",
+  "response_html": null,
+  "subject": "Stay connected with Songa Mobility",
+  "use_html": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Template",
+  "modified": "2026-09-20 20:42:16.314396",
+  "name": "Welcome to the Songa Mobility Community",
+  "response": "<div class=\"ql-editor read-mode\"><p><span style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\">Hello,</span></p><p><span style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\"><br></span></p><p><span style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\">Welcome to the </span><strong style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\">Songa community</strong><span style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\">. Thank you for confirming that you'd like to stay connected with us. <br></span></p><p><span style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\">From time to time, we'll share updates, opportunities, events, and information relevant to our growing network of stakeholders. </span></p><p><span style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\"><br></span></p><blockquote><span style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\">We're glad to have you with us as we build meaningful connections and create opportunities for progress. </span></blockquote><blockquote><span style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\"><br></span></blockquote><p><br></p><p><span style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\">Warm regards,<br></span></p><p><strong style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\">The Songa Team</strong><span style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\"><br></span></p><p><em style=\"background-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);\">Connecting people, opportunities &amp; progress</em></p></div>",
+  "response_html": null,
+  "subject": "Welcome to the Songa Mobility Community",
+  "use_html": 0
+ }
+]

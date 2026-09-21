@@ -115,25 +115,25 @@ TRANSITIONS = [
     },
     {
         "state": "Identified",
-        "action": "Decline",
+        "action": "Unsubscribe",
         "next_state": "Unsubscribed",
         "allowed": "Sales User",
     },
     {
         "state": "To Contact",
-        "action": "Decline",
+        "action": "Unsubscribe",
         "next_state": "Unsubscribed",
         "allowed": "Sales User",
     },
     {
         "state": "Contacted",
-        "action": "Decline",
+        "action": "Unsubscribe",
         "next_state": "Unsubscribed",
         "allowed": "Sales User",
     },
     {
         "state": "Engaged",
-        "action": "Decline",
+        "action": "Unsubscribe",
         "next_state": "Unsubscribed",
         "allowed": "Sales User",
     }

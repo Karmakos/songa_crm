@@ -1,6 +1,5 @@
 import frappe
 
-
 COMMON_FIELDS = [
     "first_name",
     "type",
@@ -11,7 +10,7 @@ COMMON_FIELDS = [
 TYPE_FIELDS = {
     "Driver": [
         "gender",
-        "date_of_birth",
+        "custom_date_of_birth",
         "custom_national_id_number",
         "custom_license_class",
         "custom_trike_motorcycle_experience_yrs",
@@ -171,3 +170,40 @@ def validate_lead_workflow(doc, method=None):
     frappe.throw(
         message
     )
+
+
+def validate_workflow_locks(doc, method=None):
+    if doc.is_new():
+        return
+
+    old_doc = doc.get_doc_before_save()
+
+    if not old_doc:
+        return
+
+    # locak editing type and status once engaged
+    locked_states = ["Engaged", "Onboarded", "Declined"]
+
+    if old_doc.workflow_state in locked_states:
+
+        locked_fields = ["type",   "status", "email_id", "mobile_no"]
+
+        for fieldname in locked_fields:
+            if doc.has_value_changed(fieldname):
+                # Fetch human-readable field label (optional, defaults to fieldname)
+                field_label = doc.meta.get_label(fieldname) or fieldname
+
+                frappe.throw(
+                    _("The field '{0}' cannot be modified when the lead is in state: {1}")
+                    .format(field_label, old_doc.workflow_state),
+                    title=_("Field Edit Restricted")
+                )
+
+    # Block edits on on full onboarding
+    if old_doc.workflow_state == 'Onboarded':
+        if doc.is_dirty():
+            frappe.throw(
+                _("This Lead is in state '{0}' and cannot be modified.")
+                .format(old_doc.workflow_state),
+                title=_("Document Locked")
+            )

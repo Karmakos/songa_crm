@@ -1,8 +1,11 @@
+import frappe
+
+
 def create_supplier(lead):
     existing = frappe.db.get_value(
         "Supplier",
         {
-            "supplier_name": lead.lead_name,
+            "custom_lead_name": lead.name,
         },
         "name",
     )
