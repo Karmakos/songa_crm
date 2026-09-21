@@ -194,16 +194,16 @@ def validate_workflow_locks(doc, method=None):
                 field_label = doc.meta.get_label(fieldname) or fieldname
 
                 frappe.throw(
-                    _("The field '{0}' cannot be modified when the lead is in state: {1}")
+                    ("The field '{0}' cannot be modified when the lead is in state: {1}")
                     .format(field_label, old_doc.workflow_state),
-                    title=_("Field Edit Restricted")
+                    title=("Field Edit Restricted")
                 )
 
     # Block edits on on full onboarding
     if old_doc.workflow_state == 'Onboarded':
         if doc.is_dirty():
             frappe.throw(
-                _("This Lead is in state '{0}' and cannot be modified.")
+                ("This Lead is in state '{0}' and cannot be modified.")
                 .format(old_doc.workflow_state),
-                title=_("Document Locked")
+                title=("Document Locked")
             )
